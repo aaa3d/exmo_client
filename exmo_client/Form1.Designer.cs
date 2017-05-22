@@ -32,8 +32,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.myDatabase1DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._MyDatabase_1DataSet = new exmo_client._MyDatabase_1DataSet();
             this.pairDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tradeidDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.typeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,6 +39,9 @@
             this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.myDatabase1DataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._MyDatabase_1DataSet = new exmo_client._MyDatabase_1DataSet();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.myDatabase1DataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._MyDatabase_1DataSet)).BeginInit();
@@ -82,16 +83,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(784, 445);
             this.dataGridView1.TabIndex = 2;
-            // 
-            // myDatabase1DataSetBindingSource
-            // 
-            this.myDatabase1DataSetBindingSource.DataSource = this._MyDatabase_1DataSet;
-            this.myDatabase1DataSetBindingSource.Position = 0;
-            // 
-            // _MyDatabase_1DataSet
-            // 
-            this._MyDatabase_1DataSet.DataSetName = "_MyDatabase_1DataSet";
-            this._MyDatabase_1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pairDataGridViewTextBoxColumn
             // 
@@ -135,6 +126,22 @@
             this.dateDataGridViewTextBoxColumn.HeaderText = "date";
             this.dateDataGridViewTextBoxColumn.Name = "dateDataGridViewTextBoxColumn";
             // 
+            // myDatabase1DataSetBindingSource
+            // 
+            this.myDatabase1DataSetBindingSource.DataSource = this._MyDatabase_1DataSet;
+            this.myDatabase1DataSetBindingSource.Position = 0;
+            // 
+            // _MyDatabase_1DataSet
+            // 
+            this._MyDatabase_1DataSet.DataSetName = "_MyDatabase_1DataSet";
+            this._MyDatabase_1DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 20000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,6 +174,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dateDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
